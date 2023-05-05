@@ -51,3 +51,16 @@
 
 /MapperProfile/bin/
 /MapperProfile/obj/
+
+/ViewBinding/bin/
+/ViewBinding/obj/
+
+/ViewBindingError/bin/
+/ViewBindingError/obj/
+
+/ViewBindingImpl/bin/
+/ViewBindingImpl/obj/
+
+/ViewBindingModel/bin/
+/ViewBindingModel/obj/
+
