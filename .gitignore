@@ -33,3 +33,21 @@
 
 /NavigationModel/bin/
 /NavigationModel/obj/
+
+/Container/bin/
+/Container/obj/
+
+/NavigationAttribute/bin/
+/NavigationAttribute/obj/
+
+/ContainerAttributes/bin/
+/ContainerAttributes/obj/
+
+/ContainerError/bin/
+/ContainerError/obj/
+
+/ContainerImpl/bin/
+/ContainerImpl/obj/
+
+/MapperProfile/bin/
+/MapperProfile/obj/
