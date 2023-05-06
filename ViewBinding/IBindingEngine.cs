@@ -7,7 +7,7 @@ namespace Mmvm.View.Binding
 {
     public interface IBindingEngine
     {
-        ICollection<SimpleVmBindingDto> GetSimpleVmBindings(ICollection<Type> types);
+        ICollection<SimpleVmBinding> GetSimpleVmBindings(ICollection<Type> types);
 
         ResourceDictionary GetVmBindingDictionary(ICollection<Type> types);
     }

@@ -34,7 +34,7 @@ namespace Mmvm.View.Binding.Impl
 
         #region IBindingEngine impl
 
-        public ICollection<SimpleVmBindingDto> GetSimpleVmBindings(ICollection<Type> types)
+        public ICollection<SimpleVmBinding> GetSimpleVmBindings(ICollection<Type> types)
         {
             Logger.Info("GetViewToVmBindings started");
 
@@ -71,7 +71,7 @@ namespace Mmvm.View.Binding.Impl
 
         #region Private methods
 
-        private ComplexVmBindingDto GetComplexVmBinding(SimpleVmBindingDto simpleVmBinding)
+        private ComplexVmBinding GetComplexVmBinding(SimpleVmBinding simpleVmBinding)
         {
             Logger.Debug("GetComplexVmBinding started");
 
@@ -80,10 +80,10 @@ namespace Mmvm.View.Binding.Impl
                 VisualTree = new FrameworkElementFactory(simpleVmBinding.View)
             };
 
-            return new ComplexVmBindingDto(new DataTemplateKey(simpleVmBinding.ViewModel), template);
+            return new ComplexVmBinding(new DataTemplateKey(simpleVmBinding.ViewModel), template);
         }
 
-        private ICollection<SimpleVmBindingDto> GetSimpleVmViewBindings(ICollection<Type> types)
+        private ICollection<SimpleVmBinding> GetSimpleVmViewBindings(ICollection<Type> types)
         {
             Logger.Debug("GetVmViewBindings started");
             return types
@@ -160,11 +160,11 @@ namespace Mmvm.View.Binding.Impl
                        "View to view model binding get error. Empty or null ViewModelBindingAttribute");
         }
 
-        private SimpleVmBindingDto CreateBindingObject(Type view, Type viewModel)
+        private SimpleVmBinding CreateBindingObject(Type view, Type viewModel)
         {
             Logger.Debug("CreateBindingObject started for view : {0}, and view-model : {1}",
                 view?.Name, viewModel?.Name);
-            return view != null && viewModel != null ? new SimpleVmBindingDto(view, viewModel) : null;
+            return view != null && viewModel != null ? new SimpleVmBinding(view, viewModel) : null;
         }
 
         private bool IsAttributed(Type targetType, Type attributeType)

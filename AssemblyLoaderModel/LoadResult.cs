@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Mmvm.Assembly.Loader.Model
 {
-    public class LoadResultDto
+    public class LoadResult
     {
         #region Constructors
 
-        public LoadResultDto(ICollection<Type> loadedTypes, ICollection<string> assembliesPaths)
+        public LoadResult(ICollection<Type> loadedTypes, ICollection<string> assembliesPaths)
         {
             LoadedTypes = loadedTypes;
             AssembliesPaths = assembliesPaths;

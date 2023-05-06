@@ -34,7 +34,7 @@ namespace Mmvm.Assembly.Loader.Impl
 
         #region IAssemblyLoader impl
 
-        public LoadResultDto Load(string moduleRegex)
+        public LoadResult Load(string moduleRegex)
         {
             Logger.Info("Load method started");
 
@@ -75,7 +75,7 @@ namespace Mmvm.Assembly.Loader.Impl
 
         #region Private methods
 
-        private LoadResultDto MapAssembliesToResultDto(IEnumerable<System.Reflection.Assembly> assemblies,
+        private LoadResult MapAssembliesToResultDto(IEnumerable<System.Reflection.Assembly> assemblies,
             string moduleRegex)
         {
             Logger.Debug("MapAssembliesToResult started");
@@ -84,7 +84,7 @@ namespace Mmvm.Assembly.Loader.Impl
                 .Where(assembly => MatchRegex(moduleRegex, assembly.FullName))
                 .ToList();
 
-            var result = new LoadResultDto(GetInjectableTypes(filteredAssemblies),
+            var result = new LoadResult(GetInjectableTypes(filteredAssemblies),
                 GetAssembliesPaths(filteredAssemblies));
 
             Logger.Debug("Assemblies successfully mapped to result dto");

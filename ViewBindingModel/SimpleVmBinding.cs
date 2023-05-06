@@ -2,11 +2,11 @@
 
 namespace Mmvm.View.Binding.Model
 {
-    public class SimpleVmBindingDto
+    public class SimpleVmBinding
     {
         #region Constructors
 
-        public SimpleVmBindingDto(Type view, Type viewModel)
+        public SimpleVmBinding(Type view, Type viewModel)
         {
             View = view;
             ViewModel = viewModel;

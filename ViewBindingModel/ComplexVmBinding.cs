@@ -2,11 +2,11 @@
 
 namespace Mmvm.View.Binding.Model
 {
-    public class ComplexVmBindingDto
+    public class ComplexVmBinding
     {
         #region Constructors
 
-        public ComplexVmBindingDto(DataTemplateKey key, DataTemplate value)
+        public ComplexVmBinding(DataTemplateKey key, DataTemplate value)
         {
             Key = key;
             Value = value;
