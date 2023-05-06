@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{8A60E01C-45B0-4381-AC1B-BDEDC6F28CB3}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>Mmvm.Initializer.Impl</RootNamespace>
+        <AssemblyName>Mmvm.Initializer.Impl</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Autofac, Version=7.0.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+            <HintPath>..\packages\Autofac.7.0.1\lib\netstandard2.0\Autofac.dll</HintPath>
+        </Reference>
+        <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+            <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+        </Reference>
+        <Reference Include="mscorlib"/>
+        <Reference Include="System"/>
+        <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+            <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+            <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+            <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Numerics"/>
+        <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+            <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+            <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+            <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+        </Reference>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="ApplicationInitializer.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\AssemblyLoaderImpl\AssemblyLoaderImpl.csproj">
+            <Project>{1b3a38ca-825c-4920-8e19-0e5e8c6d55ba}</Project>
+            <Name>AssemblyLoaderImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\AssemblyLoaderModel\AssemblyLoaderModel.csproj">
+            <Project>{96e97210-0219-4919-bef4-8da695a1b520}</Project>
+            <Name>AssemblyLoaderModel</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\AssemblyLoader\AssemblyLoader.csproj">
+            <Project>{6f8e09ec-291e-474e-adbb-4e08345a66cd}</Project>
+            <Name>AssemblyLoader</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ContainerImpl\ContainerImpl.csproj">
+            <Project>{8c701a24-3c5c-4657-b2fe-28b922ece5c2}</Project>
+            <Name>ContainerImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Container\Container.csproj">
+            <Project>{164d393b-57bf-464e-b0b2-5b024e20a158}</Project>
+            <Name>Container</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Initializer\Initializer.csproj">
+            <Project>{d6aee859-d10e-48a9-8681-7d0981c5e75f}</Project>
+            <Name>Initializer</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\JsonSerializer\JsonSerializer.csproj">
+            <Project>{dfc2eaf4-48cf-4e74-ad3a-ae17d4ac114b}</Project>
+            <Name>JsonSerializer</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\LoggerImpl\LoggerImpl.csproj">
+            <Project>{a6b45aae-4330-4deb-9ab0-b0864a3241a9}</Project>
+            <Name>LoggerImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Logger\Logger.csproj">
+            <Project>{6e816ea9-3c45-4aa6-a88a-08ae5f64524c}</Project>
+            <Name>Logger</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\MapperProfile\MapperProfile.csproj">
+            <Project>{a1c99a5e-39a2-4c02-9e11-1eff5e6987fb}</Project>
+            <Name>MapperProfile</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Navigation\Navigation.csproj">
+            <Project>{55dc5fb2-d61f-4e18-adcc-8fe250bbf97b}</Project>
+            <Name>Navigation</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Serializer\Serializer.csproj">
+            <Project>{869ef960-9dff-4e50-8707-630ec32098ab}</Project>
+            <Name>Serializer</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ViewBinding\ViewBinding.csproj">
+            <Project>{efca523b-a93e-4af2-87eb-d226e5438558}</Project>
+            <Name>ViewBinding</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config"/>
+        <None Include="packages.config"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
