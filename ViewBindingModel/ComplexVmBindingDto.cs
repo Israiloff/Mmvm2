@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Israiloff.Mmvm.Net.Mvvm.View.Services.BindingEngine.Dtos
+namespace Mmvm.View.Binding.Model
 {
     public class ComplexVmBindingDto
     {

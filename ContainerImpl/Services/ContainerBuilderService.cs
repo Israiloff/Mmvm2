@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Autofac;
-using Israiloff.Mmvm.Net.Container.Attributes;
-using Israiloff.Mmvm.Net.Container.Enums;
+using Mmvm.Container.Attributes;
 using Registration =
     Autofac.Builder.IRegistrationBuilder<object, Autofac.Builder.ConcreteReflectionActivatorData,
         Autofac.Builder.SingleRegistrationStyle>;
 
-namespace Israiloff.Mmvm.Net.Container.Impl.Services
+namespace Mmvm.Container.Impl.Services
 {
     public static class ContainerBuilderService
     {

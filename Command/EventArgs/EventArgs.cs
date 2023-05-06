@@ -1,4 +1,4 @@
-namespace Israiloff.Cashbox.Component.Command.EventArgs
+namespace Mmvm.Command.EventArgs
 {
     public class EventArgs<T> : System.EventArgs
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-namespace Israiloff.Cashbox.Component.Event.Aggregator.Impl
+namespace Mmvm.Event.Aggregator.Impl
 {
     /// <summary>
     /// Central event dispatcher used to send application messages to registered handlers
@@ -44,7 +44,7 @@ namespace Israiloff.Cashbox.Component.Event.Aggregator.Impl
 
             if (_messageSynchronizationContext != null)
             {
-                _messageSynchronizationContext.Send(m => Dispatch((T)m), message);
+                _messageSynchronizationContext.Send(m => Dispatch((T) m), message);
             }
             else
             {
@@ -66,7 +66,7 @@ namespace Israiloff.Cashbox.Component.Event.Aggregator.Impl
 
             if (_messageSynchronizationContext != null)
             {
-                _messageSynchronizationContext.Post(m => Dispatch((T)m), message);
+                _messageSynchronizationContext.Post(m => Dispatch((T) m), message);
             }
             else
             {

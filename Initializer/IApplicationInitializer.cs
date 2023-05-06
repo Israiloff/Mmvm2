@@ -1,6 +1,6 @@
-﻿using Israiloff.Cashbox.Component.Navigation.Services;
+﻿using Mmvm.Navigation.Services;
 
-namespace Israiloff.Mmvm.Net.Initializer.Services.ApplicationInitializer
+namespace Mmvm.Initializer
 {
     public interface IApplicationInitializer
     {

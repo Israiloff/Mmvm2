@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
-using Israiloff.Cashbox.Component.Serializer;
+using Mmvm.Serializer;
 using NLog;
 
-namespace Israiloff.Cashbox.Component.Logger.Impl
+namespace Mmvm.Logger.Impl
 {
     public class NLogLogger : ILogger
     {

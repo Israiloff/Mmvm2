@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using Autofac;
-using Israiloff.Cashbox.Component.Logger;
-using Israiloff.Cashbox.Component.Logger.Impl;
-using Israiloff.Cashbox.Component.Navigation.Services;
-using Israiloff.Cashbox.Component.Serializer.Json;
-using Israiloff.Mmvm.Net.Container.Impl.Config;
-using Israiloff.Mmvm.Net.Core.Impl.Services.AssemblyLoader;
-using Israiloff.Mmvm.Net.Core.Services.AssemblyLoader;
-using Israiloff.Mmvm.Net.Initializer.Services.ApplicationInitializer;
-using Israiloff.Mmvm.Net.Mvvm.View.Services.ResourceInitializer;
+using Mmvm.Assembly.Loader;
+using Mmvm.Assembly.Loader.Impl;
+using Mmvm.Container.Impl.Config;
+using Mmvm.Logger;
+using Mmvm.Logger.Impl;
+using Mmvm.Navigation.Services;
+using Mmvm.Serializer.Json;
+using Mmvm.View.Binding;
 
-namespace Israiloff.Mmvm.Net.Initializer.Impl.Services.ApplicationInitializer
+namespace Mmvm.Initializer.Impl
 {
     public class ApplicationInitializer : IApplicationInitializer
     {

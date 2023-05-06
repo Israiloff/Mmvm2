@@ -1,6 +1,6 @@
-﻿using Israiloff.Cashbox.Component.Navigation.Model.StructuralModels;
+﻿using Mmvm.Navigation.Model.StructuralModels;
 
-namespace Israiloff.Cashbox.Component.Navigation.Model.EventArgs
+namespace Mmvm.Navigation.Model.EventArgs
 {
     public class BeforeNavigationEventArgs : System.EventArgs
     {

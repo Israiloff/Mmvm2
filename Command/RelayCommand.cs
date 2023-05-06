@@ -1,8 +1,8 @@
 using System;
 using System.Windows.Input;
-using Israiloff.Cashbox.Component.Command.Utility;
+using Mmvm.Command.Utility;
 
-namespace Israiloff.Cashbox.Component.Command
+namespace Mmvm.Command
 {
     public class RelayCommand<T> : ICommand
     {
@@ -23,12 +23,12 @@ namespace Israiloff.Cashbox.Component.Command
 
         public bool CanExecute(object parameter)
         {
-            return _canExecute == null || _canExecute((T)parameter);
+            return _canExecute == null || _canExecute((T) parameter);
         }
 
         public void Execute(object parameter)
         {
-            _execute((T)parameter);
+            _execute((T) parameter);
         }
 
         public event EventHandler CanExecuteChanged

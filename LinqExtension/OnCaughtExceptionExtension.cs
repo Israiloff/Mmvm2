@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Israiloff.Cashbox.Component.Extension.Linq
+namespace Mmvm.Extension.Linq
 {
     public static class OnCaughtExceptionExtension
     {

@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
-using Israiloff.Cashbox.Component.Navigation.Delegates;
-using Israiloff.Cashbox.Component.Navigation.Model;
-using Israiloff.Cashbox.Component.Navigation.Model.Enums;
-using Israiloff.Cashbox.Component.Navigation.Model.StructuralModels;
+using Mmvm.Navigation.Delegates;
+using Mmvm.Navigation.Model;
+using Mmvm.Navigation.Model.Enums;
+using Mmvm.Navigation.Model.StructuralModels;
 
-namespace Israiloff.Cashbox.Component.Navigation.Services
+namespace Mmvm.Navigation.Services
 {
     /// <summary>
     /// Navigation engine for manage and control GUI's navigation 

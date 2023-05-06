@@ -1,9 +1,9 @@
 ﻿using Autofac;
-using Israiloff.Cashbox.Component.Logger;
-using Israiloff.Cashbox.Component.Navigation.Model;
-using Israiloff.Cashbox.Component.Navigation.Utilities;
+using Mmvm.Logger;
+using Mmvm.Navigation.Model;
+using Mmvm.Navigation.Utilities;
 
-namespace Israiloff.Cashbox.Component.Navigation.Impl.Utilities
+namespace Mmvm.Navigation.Impl.Utilities
 {
     public class NavigationUtility : INavigationUtility
     {

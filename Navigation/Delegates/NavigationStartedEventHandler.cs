@@ -1,6 +1,6 @@
-﻿using Israiloff.Cashbox.Component.Navigation.Model.EventArgs;
+﻿using Mmvm.Navigation.Model.EventArgs;
 
-namespace Israiloff.Cashbox.Component.Navigation.Delegates
+namespace Mmvm.Navigation.Delegates
 {
     public delegate void NavigationStartedEventHandler(object sender, NavigationStartedEventArgs e);
 }

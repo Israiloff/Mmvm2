@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Israiloff.Cashbox.Component.Navigation.Model.StructuralModels
+namespace Mmvm.Navigation.Model.StructuralModels
 {
     public class BranchInfo : ICloneable
     {

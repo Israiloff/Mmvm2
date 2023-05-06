@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Israiloff.Cashbox.Component.Event.Aggregator
+namespace Mmvm.Event.Aggregator
 {
     /// <summary>
     /// Functionality interface for an Event Aggregator

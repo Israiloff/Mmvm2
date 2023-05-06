@@ -1,6 +1,6 @@
-﻿using Israiloff.Cashbox.Component.Navigation.Model;
+﻿using Mmvm.Navigation.Model;
 
-namespace Israiloff.Cashbox.Component.Navigation.Utilities
+namespace Mmvm.Navigation.Utilities
 {
     public interface INavigationUtility
     {

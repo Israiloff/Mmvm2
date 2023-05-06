@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Reflection;
-using Israiloff.Mmvm.Net.Core.Services.AssemblyLoader.Dtos;
+using Mmvm.Assembly.Loader.Model;
 
-namespace Israiloff.Mmvm.Net.Core.Services.AssemblyLoader
+namespace Mmvm.Assembly.Loader
 {
     public interface IAssemblyLoader
     {
         LoadResultDto Load(string moduleRegex);
 
-        ICollection<Assembly> GetAllLoadedAssemblies();
+        ICollection<System.Reflection.Assembly> GetAllLoadedAssemblies();
 
         ICollection<Type> GetAllLoadedTypes();
     }

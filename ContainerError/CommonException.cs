@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Israiloff.Mmvm.Net.Core.Exceptions
+namespace Mmvm.Container.Error
 {
     public class CommonException : Exception
     {

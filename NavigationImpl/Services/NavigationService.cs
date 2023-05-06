@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Israiloff.Cashbox.Component.Logger;
-using Israiloff.Cashbox.Component.Navigation.Delegates;
-using Israiloff.Cashbox.Component.Navigation.Error;
-using Israiloff.Cashbox.Component.Navigation.Model;
-using Israiloff.Cashbox.Component.Navigation.Model.Enums;
-using Israiloff.Cashbox.Component.Navigation.Model.EventArgs;
-using Israiloff.Cashbox.Component.Navigation.Model.StructuralModels;
-using Israiloff.Cashbox.Component.Navigation.Services;
-using Israiloff.Cashbox.Component.Navigation.Utilities;
+using Mmvm.Logger;
+using Mmvm.Navigation.Delegates;
+using Mmvm.Navigation.Error;
+using Mmvm.Navigation.Model;
+using Mmvm.Navigation.Model.Enums;
+using Mmvm.Navigation.Model.EventArgs;
+using Mmvm.Navigation.Model.StructuralModels;
+using Mmvm.Navigation.Services;
+using Mmvm.Navigation.Utilities;
 
-namespace Israiloff.Cashbox.Component.Navigation.Impl.Services
+namespace Mmvm.Navigation.Impl.Services
 {
     public class NavigationService : INavigationService
     {

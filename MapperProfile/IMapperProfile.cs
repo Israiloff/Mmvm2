@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Israiloff.Mmvm.Net.Mvvm.Core.Model
+namespace Mmvm.Mapper.Profile
 {
     public interface IMapperProfile
     {

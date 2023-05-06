@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace Israiloff.Cashbox.Component.Serializer.Json
+namespace Mmvm.Serializer.Json
 {
     public class JsonSerializer : ISerializer
     {

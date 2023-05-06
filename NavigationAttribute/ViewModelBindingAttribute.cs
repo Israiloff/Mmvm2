@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace Israiloff.Mmvm.Net.Mvvm.Core.Attributes
+﻿namespace Mmvm.Navigation.Attribute
 {
-    public class ViewModelBindingAttribute : Attribute
+    public class ViewModelBindingAttribute : System.Attribute
     {
         #region Properties
 

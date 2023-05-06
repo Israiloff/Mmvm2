@@ -5,12 +5,11 @@ using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using Autofac.Util;
-using Israiloff.Cashbox.Component.Logger;
-using Israiloff.Mmvm.Net.Container.Attributes;
-using Israiloff.Mmvm.Net.Core.Services.AssemblyLoader;
-using Israiloff.Mmvm.Net.Core.Services.AssemblyLoader.Dtos;
+using Mmvm.Assembly.Loader.Model;
+using Mmvm.Container.Attributes;
+using Mmvm.Logger;
 
-namespace Israiloff.Mmvm.Net.Core.Impl.Services.AssemblyLoader
+namespace Mmvm.Assembly.Loader.Impl
 {
     [Service(Name = nameof(CommonAssemblyLoader))]
     public class CommonAssemblyLoader : IAssemblyLoader
@@ -56,7 +55,7 @@ namespace Israiloff.Mmvm.Net.Core.Impl.Services.AssemblyLoader
             return MapAssembliesToResultDto(loadedAssemblies, moduleRegex);
         }
 
-        public ICollection<Assembly> GetAllLoadedAssemblies()
+        public ICollection<System.Reflection.Assembly> GetAllLoadedAssemblies()
         {
             Logger.Info("GetAllLoadedAssemblies started");
             var result = GetLoadedAssemblies();
@@ -76,7 +75,7 @@ namespace Israiloff.Mmvm.Net.Core.Impl.Services.AssemblyLoader
 
         #region Private methods
 
-        private LoadResultDto MapAssembliesToResultDto(IEnumerable<Assembly> assemblies,
+        private LoadResultDto MapAssembliesToResultDto(IEnumerable<System.Reflection.Assembly> assemblies,
             string moduleRegex)
         {
             Logger.Debug("MapAssembliesToResult started");
@@ -93,7 +92,7 @@ namespace Israiloff.Mmvm.Net.Core.Impl.Services.AssemblyLoader
             return result;
         }
 
-        private ICollection<string> GetAssembliesPaths(IEnumerable<Assembly> assemblies)
+        private ICollection<string> GetAssembliesPaths(IEnumerable<System.Reflection.Assembly> assemblies)
         {
             Logger.Debug("GetAssembliesPaths started");
             var result = assemblies.Select(assembly => assembly.Location).ToList();
@@ -101,7 +100,7 @@ namespace Israiloff.Mmvm.Net.Core.Impl.Services.AssemblyLoader
             return result;
         }
 
-        private ICollection<Type> GetTypes(IEnumerable<Assembly> assemblies)
+        private ICollection<Type> GetTypes(IEnumerable<System.Reflection.Assembly> assemblies)
         {
             Logger.Debug("GetTypes started");
 
@@ -113,7 +112,7 @@ namespace Israiloff.Mmvm.Net.Core.Impl.Services.AssemblyLoader
             return result;
         }
 
-        private ICollection<Type> GetInjectableTypes(IEnumerable<Assembly> assemblies)
+        private ICollection<Type> GetInjectableTypes(IEnumerable<System.Reflection.Assembly> assemblies)
         {
             Logger.Debug("GetTypes started");
 
@@ -140,10 +139,10 @@ namespace Israiloff.Mmvm.Net.Core.Impl.Services.AssemblyLoader
             }
         }
 
-        private List<Assembly> LoadAssemblies(List<string> loadingAssembliesPaths)
+        private List<System.Reflection.Assembly> LoadAssemblies(List<string> loadingAssembliesPaths)
         {
             Logger.Debug("LoadAssemblies started");
-            var loadedAssemblies = new List<Assembly>();
+            var loadedAssemblies = new List<System.Reflection.Assembly>();
             loadingAssembliesPaths
                 .ForEach(path =>
                     loadedAssemblies.Add(AppDomain.CurrentDomain.Load(AssemblyName.GetAssemblyName(path))));
@@ -186,7 +185,7 @@ namespace Israiloff.Mmvm.Net.Core.Impl.Services.AssemblyLoader
             return dllPaths;
         }
 
-        private ICollection<string> ExtractAssemblyPath(ICollection<Assembly> assemblies)
+        private ICollection<string> ExtractAssemblyPath(ICollection<System.Reflection.Assembly> assemblies)
         {
             Logger.Debug("GetAssemblyPath started");
             var result = assemblies.Select(a => a.Location).ToList();
@@ -194,7 +193,7 @@ namespace Israiloff.Mmvm.Net.Core.Impl.Services.AssemblyLoader
             return result;
         }
 
-        private ICollection<Assembly> GetLoadedAssemblies()
+        private ICollection<System.Reflection.Assembly> GetLoadedAssemblies()
         {
             Logger.Debug("GetLoadedAssemblies started");
             var loadedAssemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();

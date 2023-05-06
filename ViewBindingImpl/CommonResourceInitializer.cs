@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-using Israiloff.Cashbox.Component.Logger;
-using Israiloff.Mmvm.Net.Container.Attributes;
-using Israiloff.Mmvm.Net.Mvvm.View.Services.BindingEngine;
-using Israiloff.Mmvm.Net.Mvvm.View.Services.ResourceInitializer;
+using Mmvm.Container.Attributes;
+using Mmvm.Logger;
 
-namespace Israiloff.Mmvm.Net.Mvvm.View.Impl.Services.ResourceInitializer
+namespace Mmvm.View.Binding.Impl
 {
     [Service(Name = nameof(CommonResourceInitializer))]
     public class CommonResourceInitializer : IResourceInitializer

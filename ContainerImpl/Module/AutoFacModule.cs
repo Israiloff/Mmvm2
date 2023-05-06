@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Autofac;
-using Israiloff.Mmvm.Net.Container.Impl.Services;
+using Mmvm.Container.Impl.Services;
 
-namespace Israiloff.Mmvm.Net.Container.Impl.Module
+namespace Mmvm.Container.Impl.Module
 {
     public class AutoFacModule : Autofac.Module
     {

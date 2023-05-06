@@ -2,7 +2,7 @@
 
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 
-namespace Israiloff.Cashbox.Component.Navigation.Error
+namespace Mmvm.Navigation.Error
 {
     public class NavigationException : Exception
     {

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using Autofac;
 using AutoMapper;
 using AutoMapper.Extensions.ExpressionMapping;
-using Israiloff.Cashbox.Component.Logger.Impl;
-using Israiloff.Mmvm.Net.Container.Configs;
-using Israiloff.Mmvm.Net.Container.Impl.Module;
-using Israiloff.Mmvm.Net.Mvvm.Core.Model;
+using Mmvm.Container.Configs;
+using Mmvm.Container.Impl.Module;
+using Mmvm.Logger.Impl;
+using Mmvm.Mapper.Profile;
 
-namespace Israiloff.Mmvm.Net.Container.Impl.Config.AutoFac.Config
+namespace Mmvm.Container.Impl.Config.AutoFac.Config
 {
     public class AutoFacConfig : IContainerConfig<IContainer>
     {

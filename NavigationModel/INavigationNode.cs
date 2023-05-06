@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Israiloff.Cashbox.Component.Navigation.Model
+namespace Mmvm.Navigation.Model
 {
     /// <summary>
     /// Navigated page must implement this interface

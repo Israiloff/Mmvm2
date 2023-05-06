@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Windows;
-using Israiloff.Cashbox.Component.Logger;
-using Israiloff.Cashbox.Component.Navigation.Model;
-using Israiloff.Mmvm.Net.Container.Attributes;
-using Israiloff.Mmvm.Net.Core.Exceptions;
-using Israiloff.Mmvm.Net.Mvvm.Core.Attributes;
-using Israiloff.Mmvm.Net.Mvvm.View.Services.BindingEngine;
-using Israiloff.Mmvm.Net.Mvvm.View.Services.BindingEngine.Dtos;
+using Mmvm.Container.Attributes;
+using Mmvm.Logger;
+using Mmvm.Navigation.Attribute;
+using Mmvm.Navigation.Model;
+using Mmvm.View.Binding.Error;
+using Mmvm.View.Binding.Model;
 
-namespace Israiloff.Mmvm.Net.Mvvm.View.Impl.Services.BindingEngine
+namespace Mmvm.View.Binding.Impl
 {
     [Service(Name = nameof(CommonBindingEngine))]
     public class CommonBindingEngine : IBindingEngine

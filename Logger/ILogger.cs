@@ -1,7 +1,7 @@
 ﻿using System;
 using JetBrains.Annotations;
 
-namespace Israiloff.Cashbox.Component.Logger
+namespace Mmvm.Logger
 {
     public interface ILogger
     {

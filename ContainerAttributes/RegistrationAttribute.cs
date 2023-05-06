@@ -1,7 +1,6 @@
 ﻿using System;
-using Israiloff.Mmvm.Net.Container.Enums;
 
-namespace Israiloff.Mmvm.Net.Container.Attributes
+namespace Mmvm.Container.Attributes
 {
     [AttributeUsage(AttributeTargets.Class)]
     public abstract class RegistrationAttribute : InjectableAttribute

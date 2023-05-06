@@ -1,8 +1,8 @@
 ﻿using Autofac;
-using Israiloff.Mmvm.Net.Container.Configs;
-using Israiloff.Mmvm.Net.Container.Impl.Config.AutoFac.Config;
+using Mmvm.Container.Configs;
+using Mmvm.Container.Impl.Config.AutoFac.Config;
 
-namespace Israiloff.Mmvm.Net.Container.Impl.Config
+namespace Mmvm.Container.Impl.Config
 {
     public class ContainerConfig
     {

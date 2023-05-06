@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Israiloff.Mmvm.Net.Mvvm.Core.Model;
+using Mmvm.Mapper.Profile;
 
-namespace Israiloff.Mmvm.Net.Container.Configs
+namespace Mmvm.Container.Configs
 {
     public interface IContainerConfig<TContainer>
     {

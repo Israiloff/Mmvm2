@@ -1,4 +1,4 @@
-﻿namespace Israiloff.Mmvm.Net.Container.Services.IocContainer
+﻿namespace Mmvm.Container.Services.IocContainer
 {
     public interface IIocContainer
     {

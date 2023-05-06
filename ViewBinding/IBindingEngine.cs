@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
-using Israiloff.Mmvm.Net.Mvvm.View.Services.BindingEngine.Dtos;
+using Mmvm.View.Binding.Model;
 
-namespace Israiloff.Mmvm.Net.Mvvm.View.Services.BindingEngine
+namespace Mmvm.View.Binding
 {
     public interface IBindingEngine
     {

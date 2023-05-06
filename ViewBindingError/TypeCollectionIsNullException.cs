@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Israiloff.Mmvm.Net.Core.Exceptions
+namespace Mmvm.View.Binding.Error
 {
     public class TypeCollectionIsNullException : Exception
     {

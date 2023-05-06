@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Israiloff.Cashbox.Component.Serializer
+namespace Mmvm.Serializer
 {
     public interface ISerializer
     {

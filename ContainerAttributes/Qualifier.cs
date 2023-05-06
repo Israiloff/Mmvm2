@@ -1,4 +1,4 @@
-namespace Israiloff.Mmvm.Net.Container.Attributes
+namespace Mmvm.Container.Attributes
 {
     public class Qualifier : ParameterRegistrationAttribute
     {

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using Autofac;
-using Israiloff.Cashbox.Component.Logger;
-using Israiloff.Cashbox.Component.Serializer;
-using Israiloff.Mmvm.Net.Container.Attributes;
-using Israiloff.Mmvm.Net.Container.Configs;
-using Israiloff.Mmvm.Net.Container.Services.IocContainer;
-using Israiloff.Mmvm.Net.Core.Exceptions;
+using Mmvm.Container.Attributes;
+using Mmvm.Container.Configs;
+using Mmvm.Container.Error;
+using Mmvm.Container.Services.IocContainer;
+using Mmvm.Logger;
+using Mmvm.Serializer;
 
-namespace Israiloff.Mmvm.Net.Container.Impl.Services.IocContainer
+namespace Mmvm.Container.Impl.Services.IocContainer
 {
     [Service(Name = nameof(IocContainer))]
     public class IocContainer : IIocContainer

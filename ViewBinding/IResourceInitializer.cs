@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Israiloff.Mmvm.Net.Mvvm.View.Services.ResourceInitializer
+namespace Mmvm.View.Binding
 {
     public interface IResourceInitializer
     {

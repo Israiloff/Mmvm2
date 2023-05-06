@@ -1,7 +1,7 @@
-﻿using Israiloff.Cashbox.Component.Navigation.Model.Enums;
-using Israiloff.Cashbox.Component.Navigation.Model.StructuralModels;
+﻿using Mmvm.Navigation.Model.Enums;
+using Mmvm.Navigation.Model.StructuralModels;
 
-namespace Israiloff.Cashbox.Component.Navigation.Model.EventArgs
+namespace Mmvm.Navigation.Model.EventArgs
 {
     public class NavigationStartedEventArgs : System.EventArgs
     {

@@ -1,7 +1,7 @@
 using System;
-using Israiloff.Cashbox.Component.Command.EventArgs;
+using Mmvm.Command.EventArgs;
 
-namespace Israiloff.Cashbox.Component.Command.Utility
+namespace Mmvm.Command.Utility
 {
     public static class EventRaiser
     {

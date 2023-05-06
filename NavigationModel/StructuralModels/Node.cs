@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Israiloff.Cashbox.Component.Navigation.Model.StructuralModels
+namespace Mmvm.Navigation.Model.StructuralModels
 {
     public class Node
     {

@@ -1,4 +1,4 @@
-﻿namespace Israiloff.Mmvm.Net.Container.Enums
+﻿namespace Mmvm.Container.Attributes
 {
     public enum LifetimeScope
     {

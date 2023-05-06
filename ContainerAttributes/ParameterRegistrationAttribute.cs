@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Israiloff.Mmvm.Net.Container.Attributes
+namespace Mmvm.Container.Attributes
 {
     [AttributeUsage(AttributeTargets.Parameter)]
     public abstract class ParameterRegistrationAttribute : Attribute

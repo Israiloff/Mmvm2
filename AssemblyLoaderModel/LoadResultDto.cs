@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Israiloff.Mmvm.Net.Core.Services.AssemblyLoader.Dtos
+namespace Mmvm.Assembly.Loader.Model
 {
     public class LoadResultDto
     {

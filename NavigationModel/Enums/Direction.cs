@@ -1,4 +1,4 @@
-namespace Israiloff.Cashbox.Component.Navigation.Model.Enums
+namespace Mmvm.Navigation.Model.Enums
 {
     public enum Direction
     {
