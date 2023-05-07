@@ -52,6 +52,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Initializer", "Initializer\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitializerImpl", "InitializerImpl\InitializerImpl.csproj", "{8A60E01C-45B0-4381-AC1B-BDEDC6F28CB3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWpfApp", "SampleWpfApp\SampleWpfApp.csproj", "{57CEFA8A-805D-4FBE-B699-6E044C531F5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -162,5 +164,9 @@ Global
 		{8A60E01C-45B0-4381-AC1B-BDEDC6F28CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A60E01C-45B0-4381-AC1B-BDEDC6F28CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A60E01C-45B0-4381-AC1B-BDEDC6F28CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57CEFA8A-805D-4FBE-B699-6E044C531F5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57CEFA8A-805D-4FBE-B699-6E044C531F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57CEFA8A-805D-4FBE-B699-6E044C531F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57CEFA8A-805D-4FBE-B699-6E044C531F5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
