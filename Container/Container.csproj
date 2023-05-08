@@ -32,6 +32,9 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="Mmvm.Mapper.Profile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Mapper.Profile.1.0.0-a\lib\net48\Mmvm.Mapper.Profile.dll</HintPath>
+        </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Data"/>
@@ -43,10 +46,7 @@
         <Compile Include="Services\IocContainer\IIocContainer.cs"/>
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\MapperProfile\MapperProfile.csproj">
-            <Project>{a1c99a5e-39a2-4c02-9e11-1eff5e6987fb}</Project>
-            <Name>MapperProfile</Name>
-        </ProjectReference>
+        <None Include="packages.config"/>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
