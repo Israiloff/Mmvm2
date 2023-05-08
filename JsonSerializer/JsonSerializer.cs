@@ -1,8 +1,10 @@
 ﻿using System;
+using Mmvm.Container.Attributes;
 using Newtonsoft.Json;
 
 namespace Mmvm.Serializer.Json
 {
+    [Service(Name = nameof(JsonSerializer))]
     public class JsonSerializer : ISerializer
     {
         #region IJsonConverter impl

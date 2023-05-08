@@ -1,4 +1,6 @@
-﻿namespace SampleWpfApp
+﻿using Mmvm.Initializer.Impl;
+
+namespace SampleWpfApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -8,6 +10,7 @@
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new ApplicationInitializer().Initialize().CreateTree(nameof(MainVm));
         }
     }
 }

@@ -32,7 +32,7 @@ namespace Mmvm.Initializer.Impl
 
             var assemblyLoader = container.Resolve<IAssemblyLoader>();
             var resourceInitializer = container.Resolve<IResourceInitializer>();
-            resourceInitializer.Initialize(assemblyLoader.GetAllLoadedTypes());
+            resourceInitializer.Initialize(assemblyLoader.LoadedTypes ?? assemblyLoader.GetAllLoadedTypes());
 
             return container.Resolve<INavigationService>();
         }

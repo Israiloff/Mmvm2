@@ -69,16 +69,20 @@
         <Compile Include="Utilities\NavigationUtility.cs" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\Logger\Logger.csproj">
-        <Project>{6e816ea9-3c45-4aa6-a88a-08ae5f64524c}</Project>
-        <Name>Logger</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\NavigationError\NavigationError.csproj">
-        <Project>{52a2d758-abcb-44ab-a126-b8ec6b91aff9}</Project>
-        <Name>NavigationError</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\NavigationModel\NavigationModel.csproj">
-        <Project>{4d540ce3-de2b-4b00-804b-0d297d7385b1}</Project>
+        <ProjectReference Include="..\ContainerAttributes\ContainerAttributes.csproj">
+            <Project>{ffbe5364-9046-413a-a247-1f511d41e201}</Project>
+            <Name>ContainerAttributes</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Logger\Logger.csproj">
+            <Project>{6e816ea9-3c45-4aa6-a88a-08ae5f64524c}</Project>
+            <Name>Logger</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\NavigationError\NavigationError.csproj">
+            <Project>{52a2d758-abcb-44ab-a126-b8ec6b91aff9}</Project>
+            <Name>NavigationError</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\NavigationModel\NavigationModel.csproj">
+            <Project>{4d540ce3-de2b-4b00-804b-0d297d7385b1}</Project>
         <Name>NavigationModel</Name>
       </ProjectReference>
       <ProjectReference Include="..\Navigation\Navigation.csproj">

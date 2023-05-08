@@ -30,6 +30,54 @@ namespace Mmvm.Assembly.Loader.Impl
         private static string ExclusionsRegex =>
             "^((System)|(Microsoft)|(JetBrains)|(Newtonsoft)|(NLog)|(Autofac)|(EntityFramework))(\\.*.*)$";
 
+        public LoadResult AssemblyLoadResult
+        {
+            get
+            {
+                lock (_loadAssembliesSyncObject)
+                {
+                    return _assemblyLoadResult;
+                }
+            }
+            private set
+            {
+                lock (_loadAssembliesSyncObject)
+                {
+                    _assemblyLoadResult = value;
+                }
+            }
+        }
+
+        public ICollection<Type> LoadedTypes
+        {
+            get
+            {
+                lock (_getTypesSyncObject)
+                {
+                    return _loadedTypes;
+                }
+            }
+            private set
+            {
+                lock (_getTypesSyncObject)
+                {
+                    _loadedTypes = value;
+                }
+            }
+        }
+
+        #endregion
+
+        #region Private fields
+
+        private readonly object _loadAssembliesSyncObject = new object();
+
+        private readonly object _getTypesSyncObject = new object();
+
+        private LoadResult _assemblyLoadResult;
+
+        private ICollection<Type> _loadedTypes;
+
         #endregion
 
         #region IAssemblyLoader impl
@@ -48,27 +96,21 @@ namespace Mmvm.Assembly.Loader.Impl
             {
                 Logger.Debug("Not loaded assemblies count : {0}. Assemblies will be load", loadingAssemblies.Count);
                 LoadAssemblies(loadingAssemblies).ForEach(loadedAssemblies.Add);
-                return MapAssembliesToResultDto(loadedAssemblies, moduleRegex);
+                AssemblyLoadResult = MapAssembliesToResultDto(loadedAssemblies, moduleRegex);
+                return AssemblyLoadResult;
             }
 
             Logger.Warn("All assemblies already loaded. Operation terminated");
-            return MapAssembliesToResultDto(loadedAssemblies, moduleRegex);
-        }
-
-        public ICollection<System.Reflection.Assembly> GetAllLoadedAssemblies()
-        {
-            Logger.Info("GetAllLoadedAssemblies started");
-            var result = GetLoadedAssemblies();
-            Logger.Debug("Loaded assemblies\' count : {0}", result.Count);
-            return result;
+            AssemblyLoadResult = MapAssembliesToResultDto(loadedAssemblies, moduleRegex);
+            return AssemblyLoadResult;
         }
 
         public ICollection<Type> GetAllLoadedTypes()
         {
             Logger.Info("GetAllLoadedTypes started");
-            var result = GetTypes(GetLoadedAssemblies());
-            Logger.Debug("Loaded types\' count : {0}", result.Count);
-            return result;
+            LoadedTypes = GetTypes(GetLoadedAssemblies());
+            Logger.Debug("Loaded types\' count : {0}", LoadedTypes.Count);
+            return LoadedTypes;
         }
 
         #endregion
@@ -196,9 +238,42 @@ namespace Mmvm.Assembly.Loader.Impl
         private ICollection<System.Reflection.Assembly> GetLoadedAssemblies()
         {
             Logger.Debug("GetLoadedAssemblies started");
-            var loadedAssemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
-            Logger.Debug("Already load to appdomain assemblies got. Assemblies count : {0}", loadedAssemblies.Count);
-            return loadedAssemblies;
+
+            var loaded = AppDomain
+                .CurrentDomain
+                .GetAssemblies();
+
+            Logger.Debug("Already loaded to current domain assemblies' count : {0}", loaded.Length);
+
+            var assemblies = Filter(
+                    Directory.EnumerateFiles(
+                        Directory.GetCurrentDirectory(),
+                        "*.dll",
+                        SearchOption.AllDirectories),
+                    new[] {"."},
+                    loaded.Select(assembly => "^" + assembly.GetName().Name + "*"),
+                    Path.GetFileName)
+                .Select(System.Reflection.Assembly.LoadFrom)
+                .ToList();
+
+            Logger.Debug("Loaded assemblies' count : {0}", assemblies.Count);
+
+            var summary = loaded.Concat(assemblies).ToList();
+            Logger.Debug("Assemblies' summary : {0}", summary.Count);
+
+            return summary;
+        }
+
+        private static IEnumerable<T> Filter<T>(IEnumerable<T> types, IEnumerable<string> includePatterns,
+            IEnumerable<string> excludePatterns, Func<T, string> targetSelector)
+        {
+            return types.Where(type =>
+            {
+                var target = targetSelector.Invoke(type);
+                return includePatterns.Any(pattern => Regex.IsMatch(target, pattern))
+                       && excludePatterns.All(pattern => !Regex.IsMatch(target, pattern))
+                       && !Regex.IsMatch(target, ExclusionsRegex);
+            });
         }
 
         #endregion

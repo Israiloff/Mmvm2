@@ -1,10 +1,12 @@
 ﻿using Autofac;
+using Mmvm.Container.Attributes;
 using Mmvm.Logger;
 using Mmvm.Navigation.Model;
 using Mmvm.Navigation.Utilities;
 
 namespace Mmvm.Navigation.Impl.Utilities
 {
+    [Service(Name = nameof(NavigationUtility), LifetimeScope = LifetimeScope.SingleInstance)]
     public class NavigationUtility : INavigationUtility
     {
         #region Constructors

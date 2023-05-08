@@ -6,9 +6,11 @@ namespace Mmvm.Assembly.Loader
 {
     public interface IAssemblyLoader
     {
-        LoadResult Load(string moduleRegex);
+        LoadResult AssemblyLoadResult { get; }
 
-        ICollection<System.Reflection.Assembly> GetAllLoadedAssemblies();
+        ICollection<Type> LoadedTypes { get; }
+
+        LoadResult Load(string moduleRegex);
 
         ICollection<Type> GetAllLoadedTypes();
     }

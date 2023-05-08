@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Mmvm.Container.Attributes;
 using Mmvm.Logger;
 using Mmvm.Navigation.Delegates;
 using Mmvm.Navigation.Error;
@@ -13,6 +14,7 @@ using Mmvm.Navigation.Utilities;
 
 namespace Mmvm.Navigation.Impl.Services
 {
+    [Service(Name = nameof(NavigationService), LifetimeScope = LifetimeScope.SingleInstance)]
     public class NavigationService : INavigationService
     {
         #region Constructors

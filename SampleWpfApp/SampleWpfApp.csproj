@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props"
-            Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -35,9 +34,18 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="Microsoft.CSharp"/>
+        <Reference Include="NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+            <HintPath>..\packages\NLog.5.1.4\lib\net46\NLog.dll</HintPath>
+        </Reference>
         <Reference Include="System"/>
+        <Reference Include="System.Configuration"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Data"/>
+        <Reference Include="System.IO.Compression"/>
+        <Reference Include="System.Runtime.Serialization"/>
+        <Reference Include="System.ServiceModel"/>
+        <Reference Include="System.Transactions"/>
         <Reference Include="System.Xml"/>
         <Reference Include="System.Xaml">
             <RequiredTargetFramework>4.0</RequiredTargetFramework>
@@ -59,6 +67,7 @@
             <DependentUpon>App.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
+        <Compile Include="MainVm.cs"/>
         <Compile Include="MainWindow.xaml.cs">
             <DependentUpon>MainWindow.xaml</DependentUpon>
             <SubType>Code</SubType>
@@ -80,6 +89,121 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config"/>
+        <None Include="NLog.config"/>
+        <None Include="packages.config"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\AssemblyLoaderImpl\AssemblyLoaderImpl.csproj">
+            <Project>{1b3a38ca-825c-4920-8e19-0e5e8c6d55ba}</Project>
+            <Name>AssemblyLoaderImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\AssemblyLoaderModel\AssemblyLoaderModel.csproj">
+            <Project>{96e97210-0219-4919-bef4-8da695a1b520}</Project>
+            <Name>AssemblyLoaderModel</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\AssemblyLoader\AssemblyLoader.csproj">
+            <Project>{6f8e09ec-291e-474e-adbb-4e08345a66cd}</Project>
+            <Name>AssemblyLoader</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Command\Command.csproj">
+            <Project>{b40bedbd-f4ec-40f4-ac52-199a333c2145}</Project>
+            <Name>Command</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ContainerAttributes\ContainerAttributes.csproj">
+            <Project>{ffbe5364-9046-413a-a247-1f511d41e201}</Project>
+            <Name>ContainerAttributes</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ContainerError\ContainerError.csproj">
+            <Project>{e0610382-5e0a-4785-ad4e-b8fb245829a1}</Project>
+            <Name>ContainerError</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ContainerImpl\ContainerImpl.csproj">
+            <Project>{8c701a24-3c5c-4657-b2fe-28b922ece5c2}</Project>
+            <Name>ContainerImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Container\Container.csproj">
+            <Project>{164d393b-57bf-464e-b0b2-5b024e20a158}</Project>
+            <Name>Container</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\EventAggregator\EventAggregator.csproj">
+            <Project>{da4073e5-de5e-4209-be99-76f1d7709d9d}</Project>
+            <Name>EventAggregator</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\InitializerImpl\InitializerImpl.csproj">
+            <Project>{8a60e01c-45b0-4381-ac1b-bdedc6f28cb3}</Project>
+            <Name>InitializerImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Initializer\Initializer.csproj">
+            <Project>{d6aee859-d10e-48a9-8681-7d0981c5e75f}</Project>
+            <Name>Initializer</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\JsonSerializer\JsonSerializer.csproj">
+            <Project>{dfc2eaf4-48cf-4e74-ad3a-ae17d4ac114b}</Project>
+            <Name>JsonSerializer</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\LinqExtension\LinqExtension.csproj">
+            <Project>{c2ba8a07-d93a-4934-af08-1832ccdbd420}</Project>
+            <Name>LinqExtension</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\LoggerImpl\LoggerImpl.csproj">
+            <Project>{a6b45aae-4330-4deb-9ab0-b0864a3241a9}</Project>
+            <Name>LoggerImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Logger\Logger.csproj">
+            <Project>{6e816ea9-3c45-4aa6-a88a-08ae5f64524c}</Project>
+            <Name>Logger</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\MapperProfile\MapperProfile.csproj">
+            <Project>{a1c99a5e-39a2-4c02-9e11-1eff5e6987fb}</Project>
+            <Name>MapperProfile</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\MvvmCore\MvvmCore.csproj">
+            <Project>{c4823220-f059-435f-b91f-81824980ac8c}</Project>
+            <Name>MvvmCore</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\NavigationAttribute\NavigationAttribute.csproj">
+            <Project>{92bdf44d-7120-4f40-bac4-c151c2aa9c41}</Project>
+            <Name>NavigationAttribute</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\NavigationError\NavigationError.csproj">
+            <Project>{52a2d758-abcb-44ab-a126-b8ec6b91aff9}</Project>
+            <Name>NavigationError</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\NavigationImpl\NavigationImpl.csproj">
+            <Project>{cd531ced-50ac-4a39-95bb-98c1bd061938}</Project>
+            <Name>NavigationImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\NavigationModel\NavigationModel.csproj">
+            <Project>{4d540ce3-de2b-4b00-804b-0d297d7385b1}</Project>
+            <Name>NavigationModel</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Navigation\Navigation.csproj">
+            <Project>{55dc5fb2-d61f-4e18-adcc-8fe250bbf97b}</Project>
+            <Name>Navigation</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Serializer\Serializer.csproj">
+            <Project>{869ef960-9dff-4e50-8707-630ec32098ab}</Project>
+            <Name>Serializer</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ViewBindingError\ViewBindingError.csproj">
+            <Project>{2385a3e5-0b30-418d-b7c1-1b03273bb9dc}</Project>
+            <Name>ViewBindingError</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ViewBindingImpl\ViewBindingImpl.csproj">
+            <Project>{5642cdc4-0983-4d0f-a272-49d354a42f3f}</Project>
+            <Name>ViewBindingImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ViewBindingModel\ViewBindingModel.csproj">
+            <Project>{8f6e7225-1899-458b-9c7f-c47005ecbedf}</Project>
+            <Name>ViewBindingModel</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ViewBinding\ViewBinding.csproj">
+            <Project>{efca523b-a93e-4af2-87eb-d226e5438558}</Project>
+            <Name>ViewBinding</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="NLog.xsd"/>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>
