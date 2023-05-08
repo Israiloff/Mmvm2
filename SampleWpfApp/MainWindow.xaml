@@ -10,7 +10,6 @@
         d:DesignHeight="1024" d:DesignWidth="300">
 
     <Grid>
-        
         <TextBlock Text="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged}" />
     </Grid>
 </Window>
