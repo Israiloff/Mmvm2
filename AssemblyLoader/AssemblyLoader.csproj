@@ -32,6 +32,9 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="Mmvm.Assembly.Loader.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Assembly.Loader.Model.1.0.0-a\lib\net48\Mmvm.Assembly.Loader.Model.dll</HintPath>
+        </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Data"/>
@@ -42,10 +45,7 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\AssemblyLoaderModel\AssemblyLoaderModel.csproj">
-            <Project>{96e97210-0219-4919-bef4-8da695a1b520}</Project>
-            <Name>AssemblyLoaderModel</Name>
-        </ProjectReference>
+        <None Include="packages.config"/>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
