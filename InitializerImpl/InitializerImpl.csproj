@@ -35,19 +35,115 @@
         <Reference Include="Autofac, Version=7.0.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
             <HintPath>..\packages\Autofac.7.0.1\lib\netstandard2.0\Autofac.dll</HintPath>
         </Reference>
+        <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+            <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+        </Reference>
+        <Reference Include="AutoMapper.Extensions.ExpressionMapping, Version=4.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+            <HintPath>..\packages\AutoMapper.Extensions.ExpressionMapping.4.1.5\lib\net461\AutoMapper.Extensions.ExpressionMapping.dll</HintPath>
+        </Reference>
+        <Reference Include="JetBrains.Annotations, Version=4242.42.42.42, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+            <HintPath>..\packages\JetBrains.Annotations.2022.3.1\lib\net20\JetBrains.Annotations.dll</HintPath>
+        </Reference>
         <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
             <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
         </Reference>
+        <Reference Include="Microsoft.CSharp"/>
+        <Reference Include="Mmvm.Assembly.Loader, Version=1.0.2.1139, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Assembly.Loader.1.0.2-a\lib\net48\Mmvm.Assembly.Loader.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Assembly.Loader.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Assembly.Loader.Impl.1.0.0-a\lib\net48\Mmvm.Assembly.Loader.Impl.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Assembly.Loader.Model, Version=1.0.1.953, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Assembly.Loader.Model.1.0.1-a\lib\net48\Mmvm.Assembly.Loader.Model.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Command, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Command.1.0.0-a\lib\net48\Mmvm.Command.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Container, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Container.1.0.0-a\lib\net48\Mmvm.Container.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Container.Attributes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Container.Attributes.1.0.0-a\lib\net48\Mmvm.Container.Attributes.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Container.Error, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Container.Error.1.0.0-a\lib\net48\Mmvm.Container.Error.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Container.Impl, Version=1.0.0.1488, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Container.Impl.1.0.0-a\lib\net48\Mmvm.Container.Impl.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Event.Aggregator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Event.Aggregator.1.0.0-a\lib\net48\Mmvm.Event.Aggregator.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Extension.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Extension.Linq.1.0.0-a\lib\net48\Mmvm.Extension.Linq.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Initializer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Initializer.1.0.0-a\lib\net48\Mmvm.Initializer.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Logger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Logger.1.0.0-a\lib\net48\Mmvm.Logger.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Logger.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Logger.Impl.1.0.0-a\lib\net48\Mmvm.Logger.Impl.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Mapper.Profile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Mapper.Profile.1.0.0-a\lib\net48\Mmvm.Mapper.Profile.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Mvvm.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Mvvm.Core.1.0.0-a\lib\net48\Mmvm.Mvvm.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Navigation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Navigation.1.0.0-a\lib\net48\Mmvm.Navigation.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Navigation.Attribute, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Navigation.Attribute.1.0.0-a\lib\net48\Mmvm.Navigation.Attribute.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Navigation.Error, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Navigation.Error.1.0.0-a\lib\net48\Mmvm.Navigation.Error.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Navigation.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Navigation.Impl.1.0.0-a\lib\net48\Mmvm.Navigation.Impl.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Navigation.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Navigation.Model.1.0.0-a\lib\net48\Mmvm.Navigation.Model.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Serializer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Serializer.1.0.0-a\lib\net48\Mmvm.Serializer.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.Serializer.Json, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.Serializer.Json.1.0.0-a\lib\net48\Mmvm.Serializer.Json.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.View.Binding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.View.Binding.1.0.0-a\lib\net48\Mmvm.View.Binding.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.View.Binding.Error, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.View.Binding.Error.1.0.0-a\lib\net48\Mmvm.View.Binding.Error.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.View.Binding.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.View.Binding.Impl.1.0.0-a\lib\net48\Mmvm.View.Binding.Impl.dll</HintPath>
+        </Reference>
+        <Reference Include="Mmvm.View.Binding.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+            <HintPath>..\packages\Mmvm.View.Binding.Model.1.0.0-a\lib\net48\Mmvm.View.Binding.Model.dll</HintPath>
+        </Reference>
         <Reference Include="mscorlib"/>
+        <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+            <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+        </Reference>
+        <Reference Include="NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+            <HintPath>..\packages\NLog.5.1.4\lib\net46\NLog.dll</HintPath>
+        </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
             <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
         </Reference>
+        <Reference Include="System.Configuration"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Data"/>
         <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
             <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
         </Reference>
+        <Reference Include="System.IO.Compression"/>
         <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
             <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
         </Reference>
@@ -66,108 +162,6 @@
     <ItemGroup>
         <Compile Include="ApplicationInitializer.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\AssemblyLoaderImpl\AssemblyLoaderImpl.csproj">
-            <Project>{1b3a38ca-825c-4920-8e19-0e5e8c6d55ba}</Project>
-            <Name>AssemblyLoaderImpl</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\AssemblyLoaderModel\AssemblyLoaderModel.csproj">
-            <Project>{96e97210-0219-4919-bef4-8da695a1b520}</Project>
-            <Name>AssemblyLoaderModel</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\AssemblyLoader\AssemblyLoader.csproj">
-            <Project>{6f8e09ec-291e-474e-adbb-4e08345a66cd}</Project>
-            <Name>AssemblyLoader</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\Command\Command.csproj">
-            <Project>{b40bedbd-f4ec-40f4-ac52-199a333c2145}</Project>
-            <Name>Command</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\ContainerAttributes\ContainerAttributes.csproj">
-            <Project>{ffbe5364-9046-413a-a247-1f511d41e201}</Project>
-            <Name>ContainerAttributes</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\ContainerError\ContainerError.csproj">
-            <Project>{e0610382-5e0a-4785-ad4e-b8fb245829a1}</Project>
-            <Name>ContainerError</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\ContainerImpl\ContainerImpl.csproj">
-            <Project>{8c701a24-3c5c-4657-b2fe-28b922ece5c2}</Project>
-            <Name>ContainerImpl</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\Container\Container.csproj">
-            <Project>{164d393b-57bf-464e-b0b2-5b024e20a158}</Project>
-            <Name>Container</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\EventAggregator\EventAggregator.csproj">
-            <Project>{da4073e5-de5e-4209-be99-76f1d7709d9d}</Project>
-            <Name>EventAggregator</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\Initializer\Initializer.csproj">
-            <Project>{d6aee859-d10e-48a9-8681-7d0981c5e75f}</Project>
-            <Name>Initializer</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\JsonSerializer\JsonSerializer.csproj">
-            <Project>{dfc2eaf4-48cf-4e74-ad3a-ae17d4ac114b}</Project>
-            <Name>JsonSerializer</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\LinqExtension\LinqExtension.csproj">
-            <Project>{c2ba8a07-d93a-4934-af08-1832ccdbd420}</Project>
-            <Name>LinqExtension</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\LoggerImpl\LoggerImpl.csproj">
-            <Project>{a6b45aae-4330-4deb-9ab0-b0864a3241a9}</Project>
-            <Name>LoggerImpl</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\Logger\Logger.csproj">
-            <Project>{6e816ea9-3c45-4aa6-a88a-08ae5f64524c}</Project>
-            <Name>Logger</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\MapperProfile\MapperProfile.csproj">
-            <Project>{a1c99a5e-39a2-4c02-9e11-1eff5e6987fb}</Project>
-            <Name>MapperProfile</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\NavigationAttribute\NavigationAttribute.csproj">
-            <Project>{92bdf44d-7120-4f40-bac4-c151c2aa9c41}</Project>
-            <Name>NavigationAttribute</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\NavigationError\NavigationError.csproj">
-            <Project>{52a2d758-abcb-44ab-a126-b8ec6b91aff9}</Project>
-            <Name>NavigationError</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\NavigationImpl\NavigationImpl.csproj">
-            <Project>{cd531ced-50ac-4a39-95bb-98c1bd061938}</Project>
-            <Name>NavigationImpl</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\NavigationModel\NavigationModel.csproj">
-            <Project>{4d540ce3-de2b-4b00-804b-0d297d7385b1}</Project>
-            <Name>NavigationModel</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\Navigation\Navigation.csproj">
-            <Project>{55dc5fb2-d61f-4e18-adcc-8fe250bbf97b}</Project>
-            <Name>Navigation</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\Serializer\Serializer.csproj">
-            <Project>{869ef960-9dff-4e50-8707-630ec32098ab}</Project>
-            <Name>Serializer</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\ViewBindingError\ViewBindingError.csproj">
-            <Project>{2385a3e5-0b30-418d-b7c1-1b03273bb9dc}</Project>
-            <Name>ViewBindingError</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\ViewBindingImpl\ViewBindingImpl.csproj">
-            <Project>{5642cdc4-0983-4d0f-a272-49d354a42f3f}</Project>
-            <Name>ViewBindingImpl</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\ViewBindingModel\ViewBindingModel.csproj">
-            <Project>{8f6e7225-1899-458b-9c7f-c47005ecbedf}</Project>
-            <Name>ViewBindingModel</Name>
-        </ProjectReference>
-        <ProjectReference Include="..\ViewBinding\ViewBinding.csproj">
-            <Project>{efca523b-a93e-4af2-87eb-d226e5438558}</Project>
-            <Name>ViewBinding</Name>
-        </ProjectReference>
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config"/>
