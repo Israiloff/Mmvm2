@@ -32,12 +32,6 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Mmvm.Container.Attributes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Container.Attributes.1.0.0-a\lib\net48\Mmvm.Container.Attributes.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Serializer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Serializer.1.0.0-a\lib\net48\Mmvm.Serializer.dll</HintPath>
-        </Reference>
         <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
             <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
         </Reference>
@@ -47,13 +41,23 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="JsonSerializer.cs" />
-        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="JsonSerializer.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>
-      <None Include="packages.config" />
+        <ProjectReference Include="..\ContainerAttributes\ContainerAttributes.csproj">
+            <Project>{ffbe5364-9046-413a-a247-1f511d41e201}</Project>
+            <Name>ContainerAttributes</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Serializer\Serializer.csproj">
+            <Project>{869ef960-9dff-4e50-8707-630ec32098ab}</Project>
+            <Name>Serializer</Name>
+        </ProjectReference>
     </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <ItemGroup>
+        <None Include="packages.config"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
