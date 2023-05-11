@@ -4,6 +4,7 @@ using Mmvm.Mvvm.Core;
 using Mmvm.Navigation.Model;
 using Mmvm.Navigation.Model.StructuralModels;
 using Mmvm.Navigation.Services;
+using SampleWpfApp.Utils;
 using SampleWpfApp.ViewModels;
 
 namespace SampleWpfApp
@@ -13,13 +14,11 @@ namespace SampleWpfApp
     {
         #region Constructor
 
-        public MainVm(ILogger logger, INavigationService navigationService
-            // , GuiSynchronizer synchronizer
-        )
+        public MainVm(ILogger logger, INavigationService navigationService, GuiSynchronizer synchronizer)
         {
             Logger = logger;
             NavigationService = navigationService;
-            // Synchronizer = synchronizer;
+            Synchronizer = synchronizer;
             navigationService.CreateBranch(new BranchModel(nameof(MainVm), nameof(FirstVm), ChangePage));
             NavigationService.ForwardAsync(new NavigateArgs(new BranchInfo(nameof(MainVm), nameof(FirstVm)),
                 nameof(FirstVm)));
@@ -42,7 +41,7 @@ namespace SampleWpfApp
 
         private INavigationService NavigationService { get; }
 
-        // private GuiSynchronizer Synchronizer { get; }
+        private GuiSynchronizer Synchronizer { get; }
 
         #endregion
 
@@ -79,12 +78,7 @@ namespace SampleWpfApp
         public void ChangePage(INavigationNode node)
         {
             Logger.Debug("{0} started for : {1}", nameof(ChangePage), node.GetType().FullName);
-            // Synchronizer.Sync(() =>
-            // {
-            var current = CurrentPage;
-            CurrentPage = node;
-            current?.Dispose();
-            // });
+            Synchronizer.Sync(() => { CurrentPage = node; });
         }
 
         #endregion

@@ -9,7 +9,15 @@
       d:DataContext="{d:DesignInstance {x:Type viewModels:ThirdVm}, IsDesignTimeCreatable = True}"
       d:DesignHeight="1024" d:DesignWidth="300">
 
-    <Grid>
-        <TextBlock Text="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged}" />
-    </Grid>
+    <StackPanel>
+        <TextBlock Margin="10"
+                   TextAlignment="Center"
+                   Text="{Binding Path=Title, UpdateSourceTrigger=PropertyChanged}" />
+        <TextBox Margin="10" Text="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged}" />
+        <Button Margin="50 0 0 0"
+                Height="30" Width="90"
+                HorizontalAlignment="Left"
+                Content="Back"
+                Command="{Binding Back}" />
+    </StackPanel>
 </Page>

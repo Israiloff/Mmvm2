@@ -14,12 +14,6 @@ namespace SampleWpfApp.ViewModels
     [Component(Name = nameof(FirstVm), LifetimeScope = LifetimeScope.InstancePerDependency)]
     public class FirstVm : Parent, INavigationNode
     {
-        #region Private fields
-
-        private string _text = "First page";
-
-        #endregion
-
         #region Constructors
 
         public FirstVm(ILogger logger, INavigationService navigationService) : base(logger)
@@ -35,7 +29,35 @@ namespace SampleWpfApp.ViewModels
 
         #endregion
 
+        #region Commands
+
+        public ICommand Forward => new RelayCommand(o =>
+        {
+            Logger.Debug("Command started with arg : {0}", o);
+            NavigationService.ForwardAsync(
+                new NavigateArgs(new BranchInfo(nameof(MainVm), nameof(FirstVm)), nameof(SecondVm)));
+        });
+
+        #endregion
+
+        #region Private fields
+
+        private string _title = "First page";
+        private string _text;
+
+        #endregion
+
         #region Properties
+
+        public string Title
+        {
+            get => _title;
+            set
+            {
+                _title = value;
+                OnPropertyChanged();
+            }
+        }
 
         public string Text
         {
@@ -46,17 +68,6 @@ namespace SampleWpfApp.ViewModels
                 OnPropertyChanged();
             }
         }
-
-        #endregion
-
-        #region Commands
-
-        public ICommand Command => new RelayCommand(o =>
-        {
-            Logger.Debug("Command started with arg : {0}", o);
-            NavigationService.Forward(
-                new NavigateArgs(new BranchInfo(nameof(MainVm), nameof(MainVm)), nameof(SecondVm)));
-        });
 
         #endregion
     }
