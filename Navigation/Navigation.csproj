@@ -32,30 +32,30 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Mmvm.Navigation.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Navigation.Model.1.0.0-a\lib\net48\Mmvm.Navigation.Model.dll</HintPath>
-        </Reference>
-        <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-            <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-        </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Data"/>
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Delegates\AfterPageChangeEventHandler.cs" />
-        <Compile Include="Delegates\BeforePageChangeEventHandler.cs" />
-        <Compile Include="Delegates\BranchDisabledEventHandler.cs" />
-        <Compile Include="Delegates\NavigationStartedEventHandler.cs" />
-        <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Services\INavigationService.cs" />
-        <Compile Include="Utilities\INavigationUtility.cs" />
+        <Compile Include="Delegates\AfterPageChangeEventHandler.cs"/>
+        <Compile Include="Delegates\BeforePageChangeEventHandler.cs"/>
+        <Compile Include="Delegates\BranchDisabledEventHandler.cs"/>
+        <Compile Include="Delegates\NavigationStartedEventHandler.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="Services\INavigationService.cs"/>
+        <Compile Include="Utilities\INavigationUtility.cs"/>
     </ItemGroup>
     <ItemGroup>
         <None Include="packages.config"/>
     </ItemGroup>
-    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <ItemGroup>
+        <ProjectReference Include="..\NavigationModel\NavigationModel.csproj">
+            <Project>{4d540ce3-de2b-4b00-804b-0d297d7385b1}</Project>
+            <Name>NavigationModel</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
