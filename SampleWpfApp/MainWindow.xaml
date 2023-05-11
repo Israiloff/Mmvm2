@@ -9,7 +9,9 @@
         d:DataContext="{d:DesignInstance {x:Type vm:MainVm}, IsDesignTimeCreatable = True}"
         d:DesignHeight="1024" d:DesignWidth="300">
 
-    <Grid>
+    <StackPanel>
         <TextBlock Text="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged}" />
-    </Grid>
+        <Line />
+        <Frame Content="{Binding Path=CurrentPage, UpdateSourceTrigger=PropertyChanged}" />
+    </StackPanel>
 </Window>
