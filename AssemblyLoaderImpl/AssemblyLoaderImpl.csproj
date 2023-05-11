@@ -35,23 +35,8 @@
         <Reference Include="Autofac, Version=7.0.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
             <HintPath>..\packages\Autofac.7.0.1\lib\netstandard2.0\Autofac.dll</HintPath>
         </Reference>
-        <Reference Include="JetBrains.Annotations, Version=4242.42.42.42, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
-            <HintPath>..\packages\JetBrains.Annotations.2022.3.1\lib\net20\JetBrains.Annotations.dll</HintPath>
-        </Reference>
         <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
             <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Assembly.Loader, Version=1.0.2.1139, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Assembly.Loader.1.0.2-a\lib\net48\Mmvm.Assembly.Loader.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Assembly.Loader.Model, Version=1.0.1.953, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Assembly.Loader.Model.1.0.1-a\lib\net48\Mmvm.Assembly.Loader.Model.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Container.Attributes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Container.Attributes.1.0.0-a\lib\net48\Mmvm.Container.Attributes.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Logger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Logger.1.0.0-a\lib\net48\Mmvm.Logger.dll</HintPath>
         </Reference>
         <Reference Include="mscorlib"/>
         <Reference Include="System"/>
@@ -85,6 +70,24 @@
     <ItemGroup>
         <None Include="App.config"/>
         <None Include="packages.config"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\AssemblyLoaderModel\AssemblyLoaderModel.csproj">
+            <Project>{96e97210-0219-4919-bef4-8da695a1b520}</Project>
+            <Name>AssemblyLoaderModel</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\AssemblyLoader\AssemblyLoader.csproj">
+            <Project>{6f8e09ec-291e-474e-adbb-4e08345a66cd}</Project>
+            <Name>AssemblyLoader</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ContainerAttributes\ContainerAttributes.csproj">
+            <Project>{ffbe5364-9046-413a-a247-1f511d41e201}</Project>
+            <Name>ContainerAttributes</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Logger\Logger.csproj">
+            <Project>{6e816ea9-3c45-4aa6-a88a-08ae5f64524c}</Project>
+            <Name>Logger</Name>
+        </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
