@@ -32,33 +32,6 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="JetBrains.Annotations, Version=4242.42.42.42, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
-            <HintPath>..\packages\JetBrains.Annotations.2022.3.1\lib\net20\JetBrains.Annotations.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Container.Attributes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Container.Attributes.1.0.0-a\lib\net48\Mmvm.Container.Attributes.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Logger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Logger.1.0.0-a\lib\net48\Mmvm.Logger.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Navigation.Attribute, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Navigation.Attribute.1.0.0-a\lib\net48\Mmvm.Navigation.Attribute.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Navigation.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Navigation.Model.1.0.0-a\lib\net48\Mmvm.Navigation.Model.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.View.Binding, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.View.Binding.1.0.0-a\lib\net48\Mmvm.View.Binding.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.View.Binding.Error, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.View.Binding.Error.1.0.0-a\lib\net48\Mmvm.View.Binding.Error.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.View.Binding.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.View.Binding.Model.1.0.0-a\lib\net48\Mmvm.View.Binding.Model.dll</HintPath>
-        </Reference>
-        <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-            <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-        </Reference>
         <Reference Include="PresentationFramework"/>
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
@@ -71,7 +44,34 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>
-        <None Include="packages.config"/>
+        <ProjectReference Include="..\ContainerAttributes\ContainerAttributes.csproj">
+            <Project>{ffbe5364-9046-413a-a247-1f511d41e201}</Project>
+            <Name>ContainerAttributes</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Logger\Logger.csproj">
+            <Project>{6e816ea9-3c45-4aa6-a88a-08ae5f64524c}</Project>
+            <Name>Logger</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\NavigationAttribute\NavigationAttribute.csproj">
+            <Project>{92bdf44d-7120-4f40-bac4-c151c2aa9c41}</Project>
+            <Name>NavigationAttribute</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\NavigationModel\NavigationModel.csproj">
+            <Project>{4d540ce3-de2b-4b00-804b-0d297d7385b1}</Project>
+            <Name>NavigationModel</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ViewBindingError\ViewBindingError.csproj">
+            <Project>{2385a3e5-0b30-418d-b7c1-1b03273bb9dc}</Project>
+            <Name>ViewBindingError</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ViewBindingModel\ViewBindingModel.csproj">
+            <Project>{8f6e7225-1899-458b-9c7f-c47005ecbedf}</Project>
+            <Name>ViewBindingModel</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ViewBinding\ViewBinding.csproj">
+            <Project>{efca523b-a93e-4af2-87eb-d226e5438558}</Project>
+            <Name>ViewBinding</Name>
+        </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
