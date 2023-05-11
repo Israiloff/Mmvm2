@@ -41,38 +41,11 @@
         <Reference Include="AutoMapper.Extensions.ExpressionMapping, Version=4.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
             <HintPath>..\packages\AutoMapper.Extensions.ExpressionMapping.4.1.5\lib\net461\AutoMapper.Extensions.ExpressionMapping.dll</HintPath>
         </Reference>
-        <Reference Include="JetBrains.Annotations, Version=4242.42.42.42, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
-            <HintPath>..\packages\JetBrains.Annotations.2022.3.1\lib\net20\JetBrains.Annotations.dll</HintPath>
-        </Reference>
         <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
             <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
         </Reference>
         <Reference Include="Microsoft.CSharp"/>
-        <Reference Include="Mmvm.Container, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Container.1.0.0-a\lib\net48\Mmvm.Container.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Container.Attributes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Container.Attributes.1.0.0-a\lib\net48\Mmvm.Container.Attributes.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Container.Error, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Container.Error.1.0.0-a\lib\net48\Mmvm.Container.Error.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Logger, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Logger.1.0.0-a\lib\net48\Mmvm.Logger.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Logger.Impl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Logger.Impl.1.0.0-a\lib\net48\Mmvm.Logger.Impl.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Mapper.Profile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Mapper.Profile.1.0.0-a\lib\net48\Mmvm.Mapper.Profile.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Serializer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Serializer.1.0.0-a\lib\net48\Mmvm.Serializer.dll</HintPath>
-        </Reference>
         <Reference Include="mscorlib"/>
-        <Reference Include="NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-            <HintPath>..\packages\NLog.5.1.4\lib\net46\NLog.dll</HintPath>
-        </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
             <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -106,6 +79,36 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="Services\ContainerBuilderService.cs"/>
         <Compile Include="Services\IocContainer\IocContainer.cs"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\ContainerAttributes\ContainerAttributes.csproj">
+            <Project>{ffbe5364-9046-413a-a247-1f511d41e201}</Project>
+            <Name>ContainerAttributes</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\ContainerError\ContainerError.csproj">
+            <Project>{e0610382-5e0a-4785-ad4e-b8fb245829a1}</Project>
+            <Name>ContainerError</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Container\Container.csproj">
+            <Project>{164d393b-57bf-464e-b0b2-5b024e20a158}</Project>
+            <Name>Container</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\LoggerImpl\LoggerImpl.csproj">
+            <Project>{a6b45aae-4330-4deb-9ab0-b0864a3241a9}</Project>
+            <Name>LoggerImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Logger\Logger.csproj">
+            <Project>{6e816ea9-3c45-4aa6-a88a-08ae5f64524c}</Project>
+            <Name>Logger</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\MapperProfile\MapperProfile.csproj">
+            <Project>{a1c99a5e-39a2-4c02-9e11-1eff5e6987fb}</Project>
+            <Name>MapperProfile</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Serializer\Serializer.csproj">
+            <Project>{869ef960-9dff-4e50-8707-630ec32098ab}</Project>
+            <Name>Serializer</Name>
+        </ProjectReference>
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config"/>

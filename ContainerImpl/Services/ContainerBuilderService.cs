@@ -78,7 +78,7 @@ namespace Mmvm.Container.Impl.Services
                     registration.SingleInstance();
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException(nameof(lifetimeScope));
             }
         }
 
