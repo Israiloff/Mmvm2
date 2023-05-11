@@ -7,7 +7,7 @@ namespace Mmvm.Container.Attributes
     {
         #region Public properties
 
-        public LifetimeScope LifetimeScope { get; set; } = LifetimeScope.InstancePerDependency;
+        public LifetimeScope LifetimeScope { get; set; } = LifetimeScope.SingleInstance;
 
         public object Key { get; set; }
 
