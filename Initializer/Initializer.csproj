@@ -32,15 +32,6 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="Mmvm.Navigation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Navigation.1.0.0-a\lib\net48\Mmvm.Navigation.dll</HintPath>
-        </Reference>
-        <Reference Include="Mmvm.Navigation.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-            <HintPath>..\packages\Mmvm.Navigation.Model.1.0.0-a\lib\net48\Mmvm.Navigation.Model.dll</HintPath>
-        </Reference>
-        <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-            <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-        </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Data"/>
@@ -51,7 +42,14 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
     <ItemGroup>
-        <None Include="packages.config"/>
+        <ProjectReference Include="..\NavigationModel\NavigationModel.csproj">
+            <Project>{4d540ce3-de2b-4b00-804b-0d297d7385b1}</Project>
+            <Name>NavigationModel</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Navigation\Navigation.csproj">
+            <Project>{55dc5fb2-d61f-4e18-adcc-8fe250bbf97b}</Project>
+            <Name>Navigation</Name>
+        </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
