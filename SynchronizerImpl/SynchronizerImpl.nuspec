@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+    <metadata>
+        <id>$id$</id>
+        <version>$version$</version>
+        <title>$title$</title>
+        <authors>$author$</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <license type="expression">MIT</license>
+        <icon>mmvm.png</icon>
+        <projectUrl>https://github.com/Israiloff/Mmvm2</projectUrl>
+        <description>UI threads synchronizer implementation for WPF</description>
+        <copyright>$copyright$</copyright>
+        <tags>POCO</tags>
+    </metadata>
+    <files>
+        <file src="../mmvm.png" target=""/>
+    </files>
+</package>
