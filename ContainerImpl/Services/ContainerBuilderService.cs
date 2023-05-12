@@ -59,8 +59,10 @@ namespace Mmvm.Container.Impl.Services
             foreach (var parameter in attributedParameters)
             {
                 if (parameter.attribute.Named != null)
+                {
                     registration.WithParameter((p, c) => p == parameter.info,
                         (p, c) => c.ResolveNamed(parameter.attribute.Named, parameter.info.ParameterType));
+                }
             }
         }
 
@@ -94,6 +96,7 @@ namespace Mmvm.Container.Impl.Services
                         RegisterKeyed(registration, attribute, parentInterface);
                     });
 
+                registration.AsSelf();
                 registration.AsImplementedInterfaces();
             }
             else
