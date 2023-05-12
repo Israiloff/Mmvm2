@@ -133,8 +133,7 @@ namespace Mmvm.View.Binding.Impl
         private bool IsTypeNamePostfixEquals(Type type, string postfix)
         {
             Logger.Trace("IsTypeNamePostfixEquals started for postfix : {0}", postfix);
-            return string.Equals(type.Name.Substring(type.Name.Length - postfix.Length), postfix,
-                StringComparison.CurrentCultureIgnoreCase);
+            return type.Name.EndsWith(postfix);
         }
 
         private Type ResolveView(ICollection<Type> types, Type relatedType)

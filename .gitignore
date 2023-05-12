@@ -85,3 +85,9 @@
 
 /MvvmCore/bin/
 /MvvmCore/obj/
+
+/Synchronizer/bin/
+/Synchronizer/obj/
+
+/SynchronizerImpl/bin/
+/SynchronizerImpl/obj/
