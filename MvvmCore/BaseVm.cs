@@ -1,11 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using Mmvm.Navigation.Model;
 
 namespace Mmvm.Mvvm.Core
 {
-    public abstract class BaseVm : INotifyPropertyChanged
+    public abstract class BaseVm : INotifyPropertyChanged, INavigationNode
     {
+        public virtual void Dispose()
+        {
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

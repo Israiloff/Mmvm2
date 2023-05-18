@@ -3,7 +3,6 @@ using Mmvm.Command;
 using Mmvm.Container.Attributes;
 using Mmvm.Logger;
 using Mmvm.Navigation.Attribute;
-using Mmvm.Navigation.Model;
 using Mmvm.Navigation.Model.StructuralModels;
 using Mmvm.Navigation.Services;
 using SampleWpfApp.Pages;
@@ -12,7 +11,7 @@ namespace SampleWpfApp.ViewModels
 {
     [ViewModelBinding(PageName = nameof(Third))]
     [Component(Name = nameof(ThirdVm), LifetimeScope = LifetimeScope.InstancePerDependency)]
-    public class ThirdVm : Parent, INavigationNode
+    public class ThirdVm : Parent
     {
         #region Constructors
 
@@ -51,21 +50,13 @@ namespace SampleWpfApp.ViewModels
         public string Title
         {
             get => _title;
-            set
-            {
-                _title = value;
-                OnPropertyChanged();
-            }
+            set => SetField(ref _title, value);
         }
 
         public string Text
         {
             get => _text;
-            set
-            {
-                _text = value;
-                OnPropertyChanged();
-            }
+            set => SetField(ref _text, value);
         }
 
         #endregion

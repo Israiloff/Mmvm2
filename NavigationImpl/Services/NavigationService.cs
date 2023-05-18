@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -292,7 +293,7 @@ namespace Mmvm.Navigation.Impl.Services
 
         #region Private methods
 
-        private void BranchDisabledNotification(BranchInfo branchInfo)
+        private void BranchDisabledNotification(ICloneable branchInfo)
         {
             Logger.Warn("BranchDisabledNotification started for branch : {0}", branchInfo);
             BranchDisabled?.Invoke(this, new BranchDisabledEventArgs(branchInfo.Clone() as BranchInfo));
@@ -499,7 +500,7 @@ namespace Mmvm.Navigation.Impl.Services
         {
             Logger.Trace("ValidateNavigationArgs started");
             if (dictionary.ContainsKey(key)) return;
-            var message = $"Map not contains given key : {key}. Key is value of property : {propertyName}";
+            var message = $"Map does not contain the given key : {key}. The key is value of property : {propertyName}";
             Logger.Error(message);
             throw new NavigationException(message);
         }

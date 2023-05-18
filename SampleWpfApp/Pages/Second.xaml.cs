@@ -2,7 +2,7 @@
 
 namespace SampleWpfApp.Pages
 {
-    public partial class Second : Page
+    public partial class Second : UserControl
     {
         public Second()
         {

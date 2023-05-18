@@ -1,10 +1,9 @@
-﻿using System;
-using Mmvm.Logger;
+﻿using Mmvm.Logger;
 using Mmvm.Mvvm.Core;
 
 namespace SampleWpfApp.ViewModels
 {
-    public abstract class Parent : BaseVm, IDisposable
+    public abstract class Parent : BaseVm
     {
         #region Constructors
 
@@ -23,7 +22,7 @@ namespace SampleWpfApp.ViewModels
 
         #region INavigationNode impl
 
-        public void Dispose()
+        public override void Dispose()
         {
             Logger.Warn("Dispose method started");
         }

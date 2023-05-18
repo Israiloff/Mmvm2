@@ -14,7 +14,9 @@
         <TextBlock Margin="10"
                    TextAlignment="Center"
                    Text="{Binding Path=Text, UpdateSourceTrigger=PropertyChanged}" />
-        <Frame Margin="10" MinHeight="600" Width="800"
-               Content="{Binding Path=CurrentPage, UpdateSourceTrigger=PropertyChanged}" />
+        <ContentControl
+            Margin="10"
+            MinHeight="600" Width="800"
+            Content="{Binding Path=CurrentPage, UpdateSourceTrigger=PropertyChanged}" />
     </StackPanel>
 </Window>

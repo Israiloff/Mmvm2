@@ -88,7 +88,6 @@
         <Compile Include="Pages\Third.xaml.cs">
             <DependentUpon>Third.xaml</DependentUpon>
         </Compile>
-        <Compile Include="Utils\GuiSynchronizer.cs"/>
         <Compile Include="ViewModels\FirstVm.cs"/>
         <Compile Include="ViewModels\Parent.cs"/>
         <Compile Include="ViewModels\SecondVm.cs"/>
@@ -229,6 +228,14 @@
         <ProjectReference Include="..\Serializer\Serializer.csproj">
             <Project>{869ef960-9dff-4e50-8707-630ec32098ab}</Project>
             <Name>Serializer</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\SynchronizerImpl\SynchronizerImpl.csproj">
+            <Project>{fa0835bc-9304-4e20-97fb-b681f6844b13}</Project>
+            <Name>SynchronizerImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Synchronizer\Synchronizer.csproj">
+            <Project>{eeb6816b-a4cd-4b3b-aa18-e34edcc0048b}</Project>
+            <Name>Synchronizer</Name>
         </ProjectReference>
         <ProjectReference Include="..\ViewBindingError\ViewBindingError.csproj">
             <Project>{2385a3e5-0b30-418d-b7c1-1b03273bb9dc}</Project>

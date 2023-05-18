@@ -1,13 +1,12 @@
-﻿<Page x:Class="SampleWpfApp.Pages.Second"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:viewModels="clr-namespace:SampleWpfApp.ViewModels"
-      mc:Ignorable="d"
-      Title="First"
-      d:DataContext="{d:DesignInstance {x:Type viewModels:SecondVm}, IsDesignTimeCreatable = True}"
-      d:DesignHeight="1024" d:DesignWidth="300">
+﻿<UserControl x:Class="SampleWpfApp.Pages.Second"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:SampleWpfApp.ViewModels"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance {x:Type viewModels:SecondVm}, IsDesignTimeCreatable = True}"
+             d:DesignHeight="1024" d:DesignWidth="300">
 
     <StackPanel>
         <TextBlock Margin="10"
@@ -27,4 +26,4 @@
                     Command="{Binding Back}" />
         </Grid>
     </StackPanel>
-</Page>
+</UserControl>

@@ -123,6 +123,14 @@
             <Project>{869ef960-9dff-4e50-8707-630ec32098ab}</Project>
             <Name>Serializer</Name>
         </ProjectReference>
+        <ProjectReference Include="..\SynchronizerImpl\SynchronizerImpl.csproj">
+            <Project>{fa0835bc-9304-4e20-97fb-b681f6844b13}</Project>
+            <Name>SynchronizerImpl</Name>
+        </ProjectReference>
+        <ProjectReference Include="..\Synchronizer\Synchronizer.csproj">
+            <Project>{eeb6816b-a4cd-4b3b-aa18-e34edcc0048b}</Project>
+            <Name>Synchronizer</Name>
+        </ProjectReference>
         <ProjectReference Include="..\ViewBinding\ViewBinding.csproj">
             <Project>{efca523b-a93e-4af2-87eb-d226e5438558}</Project>
             <Name>ViewBinding</Name>

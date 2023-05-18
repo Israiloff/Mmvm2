@@ -4,17 +4,17 @@ using Mmvm.Mvvm.Core;
 using Mmvm.Navigation.Model;
 using Mmvm.Navigation.Model.StructuralModels;
 using Mmvm.Navigation.Services;
-using SampleWpfApp.Utils;
+using Mmvm.Synchronizer;
 using SampleWpfApp.ViewModels;
 
 namespace SampleWpfApp
 {
     [Component(Name = nameof(MainVm), LifetimeScope = LifetimeScope.SingleInstance)]
-    public class MainVm : BaseVm, INavigationNode
+    public class MainVm : BaseVm
     {
         #region Constructor
 
-        public MainVm(ILogger logger, INavigationService navigationService, GuiSynchronizer synchronizer)
+        public MainVm(ILogger logger, INavigationService navigationService, ISynchronizer synchronizer)
         {
             Logger = logger;
             NavigationService = navigationService;
@@ -26,28 +26,19 @@ namespace SampleWpfApp
 
         #endregion
 
-        #region Dispose impl
-
-        public void Dispose()
-        {
-            Logger.Info("Object disposed");
-        }
-
-        #endregion
-
         #region Services
 
         private ILogger Logger { get; }
 
         private INavigationService NavigationService { get; }
 
-        private GuiSynchronizer Synchronizer { get; }
+        private ISynchronizer Synchronizer { get; }
 
         #endregion
 
         #region Private fields
 
-        private string _text = "Hello World!";
+        private string _text = "Main Page";
 
         private INavigationNode _currentPage;
 
@@ -58,27 +49,24 @@ namespace SampleWpfApp
         public string Text
         {
             get => _text;
-            set
-            {
-                _text = value;
-                OnPropertyChanged();
-            }
+            set => SetField(ref _text, value);
         }
 
         public INavigationNode CurrentPage
         {
             get => _currentPage;
-            set
-            {
-                _currentPage = value;
-                OnPropertyChanged();
-            }
+            private set => SetField(ref _currentPage, value);
         }
 
         public void ChangePage(INavigationNode node)
         {
             Logger.Debug("{0} started for : {1}", nameof(ChangePage), node.GetType().FullName);
-            Synchronizer.Sync(() => { CurrentPage = node; });
+            Synchronizer.Sync(() =>
+            {
+                var current = CurrentPage;
+                CurrentPage = node;
+                current?.Dispose();
+            });
         }
 
         #endregion
